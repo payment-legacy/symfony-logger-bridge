@@ -2,7 +2,7 @@
     "name": "payment/symfony-logger-bridge",
     "type": "library",
     "description":"Bridge between Symfony lower/equal 2.1.X Logger and PSR0 LoggerInterface",
-    "keywords": ["annotation", "reader"],
+    "keywords": ["logger", "bridge", "symfony"],
     "homepage": "http://github.com/ibrows/IbrowsAnnotationReader",
     "license": "MIT",
     "authors": [
