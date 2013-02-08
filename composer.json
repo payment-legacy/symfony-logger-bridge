@@ -1,0 +1,27 @@
+{
+    "name": "payment/symfony-logger-bridge",
+    "type": "library",
+    "description":"Bridge between Symfony lower/equal 2.1.X Logger and PSR0 LoggerInterface",
+    "keywords": ["annotation", "reader"],
+    "homepage": "http://github.com/ibrows/IbrowsAnnotationReader",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mike Meier",
+            "email": "mike.meier@ibrows.ch",
+            "homepage": "http://www.ibrows.ch",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "psr/log": "dev-master",
+        "symfony/http-kernel": ">=2.1.0,<2.3-dev"
+    },
+    "autoload": {
+        "psr-0": {
+            "Payment\\SymfonyLoggerBridge": "src/"
+        }
+    },
+    "minimum-stability": "dev"
+}
