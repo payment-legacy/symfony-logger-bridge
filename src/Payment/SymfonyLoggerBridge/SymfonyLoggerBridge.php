@@ -37,7 +37,7 @@ class SymfonyLoggerBridge extends PsrAbstractLogger implements PsrLoggerInterfac
      * @param mixed $level
      * @param string $message
      * @param array $context
-     * @return null|void
+     * @return null
      * @throws PsrInvalidArgumentException
      */
     public function log($level, $message, array $context = array())
@@ -67,8 +67,11 @@ class SymfonyLoggerBridge extends PsrAbstractLogger implements PsrLoggerInterfac
             case PsrLogLevel::WARNING:
                 $this->symfonyLogger->warn($message, $context);
                 break;
+            default:
+                throw new PsrInvalidArgumentException(sprintf('Loglevel "%s" not valid, use constants from "%s"', $level, "Psr\\Log\\LogLevel"));
+                break;
         }
 
-        throw new PsrInvalidArgumentException(sprintf('Loglevel "%s" not valid, use constants from "%s"', $level, "Psr\\Log\\LogLevel"));
+        return null;
     }
 }
