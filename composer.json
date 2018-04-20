@@ -23,5 +23,6 @@
             "Payment\\SymfonyLoggerBridge": "src/"
         }
     },
+    "abandoned": true,
     "minimum-stability": "dev"
 }
